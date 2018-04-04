@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
 
-  </body>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Convergys San Salvador | Dictionary</title>
+
+	<!-- Global CSS -->
+<!--	<link rel="stylesheet" href="css/structure.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/text-elements.css">
+	<link rel="stylesheet" href="css/form_elements.css">
+	<link rel="stylesheet" href="css/themed.css">
+	<link rel="stylesheet" href="css/helper.css">
+	<link rel="stylesheet" type="text/css" href="css/cvgspresponsive.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+-->
+	<!-- Global JS -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/Dictionary.js"></script>
+
+</head>
+
+<body>
+
+	<p>English</p>
+	<input type="text" id="search" placeholder="Search your word" />
+
+	<p>Spanish</p>
+
+
+	<ul id="meaning">
+
+	</ul>
+	</body>
+
+
+	<script type="text/javascript">
+
+
+	  $( document ).ready(function(){
+	      $("#search").on("keyup", function(e){
+					//lookup on the dictionary and
+					var buf = lookupWord($("#search").val());
+					$("#meaning").html(buf);
+				});
+	  });
+	</script>
+
+
 </html>
