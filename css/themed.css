@@ -22,6 +22,54 @@ Convergys San Salvador 2017 - Sharepoint Development Team | DG & VL |
 }
 
 
+/* FILE EXPLORER */
+
+div.file-explorer {
+  border: 3px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.divTable.file-explorer .divTableCell, .divTable.file-explorer .divTableHead {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+.divTable.file-explorer .divTableBody .divTableCell {
+  font-size: 13px;
+}
+.divTable.file-explorer .divTableRow:nth-child(even) {
+  background: #D0E4F5;
+}
+.divTable.file-explorer .divTableHeading {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+.divTable.file-explorer .divTableHeading .divTableHead {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+.divTable.file-explorer .divTableHeading .divTableHead:first-child {
+  border-left: none;
+}
+
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+
+
+
+
 /* Header and footer common elements */
 
 header.sticky {
