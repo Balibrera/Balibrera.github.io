@@ -298,35 +298,33 @@
 
 </body>
 
-
 <script>
-// sticky Header
 
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 1){
-			$('header').addClass("sticky");
-	}
-	else{
-			$('header').removeClass("sticky");
-	}
-});
-
-$( document ).ready(function(){
-	// RAMDOMLY SHOWS UP MAIN BANNER
-	$('.pagesheader').css("background-image","url(img/backgrounds/" + showBanner(vBanners) + ")");
-});
-
-</script>
-
-<script src="js/cbpFWTabs.js"></script>
-<script>
-(function() {
-
-	[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-		new CBPFWTabs( el );
+	// sticky Header
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1){
+				$('header').addClass("sticky");
+		}
+		else{
+				$('header').removeClass("sticky");
+		}
 	});
 
-})();
+	//Initialize
+	$( document ).ready(function(){
+		// RAMDOMLY SHOWS UP MAIN BANNER
+		$('.pagesheader').css("background-image","url(img/backgrounds/" + showBanner(vBanners) + ")");
+	});
+
+	//Google Analytics
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-96615777-1', 'auto');
+	ga('send', 'pageview');
+
 </script>
-	<!-- FOOTER ELEMENTS FINISH -->
+
 </html>
