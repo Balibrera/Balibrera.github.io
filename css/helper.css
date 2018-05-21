@@ -1,0 +1,697 @@
+/*
+This style includes classes for elements that are meant to be "helpers" on the site that do not incurre into structure, fonts or theme changes other that the elements itself.
+
+*** Make changes accordingly and carefully as some elements on the website depend on this classes to work or be displayed properly ***
+
+Convergys San Salvador 2017 - Sharepoint Development Team | DG & VL |
+*/
+
+/* Tool tip used in leaders */
+
+a.lead-tooltip img {
+  position:relative; /*this is the key*/
+  z-index:24;
+  text-decoration:none;
+}
+a.lead-tooltip img:hover {
+  z-index:25
+}
+a.lead-tooltip span.tooltip {
+  display: none;
+  text-align: center;
+  -webkit-border-radius: 10px/50%;
+  -moz-border-radius: 10px/50%;
+  border-radius: 10px/50%;
+  border: 1px solid #a7a7a7;
+  background: #fff;
+  padding: 10px;
+  z-index: 30;
+  -webkit-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+}
+a.lead-tooltip:hover span.tooltip {
+  display: block;
+  position: relative;
+  margin-top: -175px;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.divider {
+	border-top-width: 3px;
+    border-top-color: #333333;
+    width: 35px;
+    margin: 20px auto 25px auto;
+}
+
+.dark .divider {
+	border-top-width: 3px;
+    border-top-color: #fff;
+    width: 35px;
+    margin: 20px auto 25px auto;
+}
+
+/* VERTICAL TABS */
+
+.verticalTabs {
+	display: inline-block!important;
+	font-size: 1.05em !important;
+	width: 100%;
+}
+
+.verticalNav ul li {
+	text-align: left !important;
+  padding: 10px 0 10px 0;
+}
+
+.verticalNav a {
+	padding: 0 0 10px 10px !important;
+}
+
+.benefitsContent p,  ul {
+	font-size: 16px !important;
+}
+
+/* PERKS */
+
+.perk {
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	margin:5px 0 5px 0;
+
+	/*vertical-align:top;
+	display:inline-block;
+	font-size:12px;*/
+}
+
+.perk .perk_content {
+	transition: 0.5s ease-out;
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	-ms-transition: 0.5s ease-out;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+
+	/* perk_content backface is visible so that static content still appears */
+	backface-visibility: visible;
+	-webkit-backface-visibility: visible;
+	-moz-backface-visibility: visible;
+	-o-backface-visibility: visible;
+	-ms-backface-visibility: visible;
+
+
+	width: 100%;
+	height: 250px;
+	/*border: 1px solid red;*/
+	margin: 0 auto 0 auto;
+
+
+}
+
+.perk .perk_content p, .perk .perk_content em {
+  color: #fff;
+	font-size: 13px;
+	line-height: 1.35em;
+	font-family: 'open_sanslight', Arial, Helvetica, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.perk .perk_content img {
+	width: 100%;
+}
+
+.perk.applyflip .perk_content {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+}
+
+.perk .perk_content .perkFront {
+    background-color: #FFF;
+	/*height: 98%;*/
+}
+
+.perk .perk_content .perkBack {
+    background-color: #FFF;
+    color: #FFF;
+	/*height: 100%;*/
+}
+
+.perk .perk_content .perkFront, .perk .perk_content .perkBack {
+	/* Backface visibility works great for all but IE. As such, we mark the backface visible in IE and manage visibility ourselves */
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height:20px;
+    /*border-radius: 14px;*/
+}
+.perk .perk_content .perkFront, .perk.applyflip .perk_content .perkFront {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	margin:3px 0 0 0;
+}
+
+.perk .perk_content .perkBack, .perk.applyflip .perk_content .perkBack {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	text-align:center;
+}
+
+.perk .perk_content .perkFront, .perk.applyflip .perk_content .perkBack {
+	/* IE Hack. Halfway through the perk flip, set visibility. Keep other browsers visible throughout the perk flip. */
+	animation: stayvisible 0.5s both;
+	-webkit-animation: stayvisible 0.5s both;
+	-moz-animation: stayvisible 0.5s both;
+	-o-animation: stayvisible 0.5s both;
+	-ms-animation: donothing 0.5s;
+	-ms-transition: visibility 0s linear 0.17s;
+	visibility: visible;
+}
+.perk.applyflip .perk_content .perkFront, .perk .perk_content .perkBack {
+	/* IE Hack. Halfway through the perk flip, set visibility. Keep other browsers visible throughout the perk flip. */
+	animation: stayvisible 0.5s both;
+	-webkit-animation: stayvisible 0.5s both;
+	-moz-animation: stayvisible 0.5s both;
+	-o-animation: stayvisible 0.5s both;
+	-ms-animation: donothing 0.5s;
+	-ms-transition: visibility 0s linear 0.17s;
+	visibility: hidden;
+}
+
+@keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-webkit-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-moz-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-o-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-ms-keyframes donothing { 0% { } 100% { } }
+
+.perk .perk_content .perkBack .perk_tooltip, .perk.applyflip .perk_content .perkBack .perk_tooltip{
+	width: 100%;
+	min-height: 245px;
+	height: auto;
+	background-color: #00A2B1;
+	padding:8px 8px 5px 15px;
+
+}
+
+/* Message users receive when information has been sent */
+
+.user-message{
+  color: #fff;
+	float: left;
+	position: relative;
+	font-family: 'open_sanslight', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-top: 20px;
+  margin-left: 10px;
+  font-weight:normal;
+}
+
+/*--------------------*/
+/*-- MASONRY GRIDS --*/
+/*--------------------*/
+
+/*.grid {
+  position: relative;
+  width: 99%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+}
+
+.grid-item {
+  position: relative;
+  display: inline-block;
+  width: 15.25%;
+  float: none;
+  margin: 0 9px 0 9px;
+ }
+.grid-item--width2 {
+  position: relative;
+  display: inline-block;
+  width: 31.66%;
+  float: none;
+  margin: 0 10px 0 10px;
+}*/
+
+/* Grids */
+
+.grid2 {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+
+.grid2 figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin:0;
+	/*min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;*/
+	width: 100%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid2 figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid2 figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid2 figure figcaption::before,
+.grid2 figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid2 figure figcaption,
+.grid2 figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid2 figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid2 figure h2 {
+	word-spacing: -0.15em;
+  font-family: 'open_sanslight', Arial, Helvetica, sans-serif;
+}
+
+.grid2 figure h2 span {
+  font-family: 'robotoblack', Arial, Helvetica, sans-serif;
+  margin-left: 5px;
+}
+
+.grid2 figure h2,
+.grid2 figure p {
+	margin: 0;
+}
+
+.grid2 figure p {
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+/* Pop up if needed */
+
+.popup {
+  /*margin: 0 auto;*/
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 600px;
+  height: 350px;
+  background: url(../../SiteAssets/img/announcements-pop.jpg) no-repeat center center;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.inpop {
+  width: 65%;
+  text-align: center;
+  float: right;
+  margin-top: 120px;
+}
+
+.close-btn {
+  border-radius: 50%;
+  width: 30px;
+  font-size: 14px;
+  /* border: 1px solid #666; */
+  box-sizing: content-box;
+  background: #f15b22;
+  color: #fff;
+  float: right;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.close-btn span {
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+
+/* VIDEOS IN VIDEO GALLERY */
+
+.videoLightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin:0 auto 0 auto;
+  width:100%;
+  height:auto;
+}
+
+/*---------------------*/
+/*--- EVENTS BLOCKS ---*/
+/*---------------------*/
+
+.dateBlock {
+  display: inline-block;
+  width: 20%;
+  align-items: stretch;
+  padding: 4%;
+  background: #e24443;
+  color: #fff;
+}
+
+.dateBlock2 {
+  display: inline-block;
+  width: 20%;
+  align-items: stretch;
+  padding: 4%;
+  background: #2f4050;
+  color: #fff;
+}
+
+.day {
+  font-size: 55px;
+  clear: both;
+}
+.month {
+  font-size: 33px;
+  font-family: 'robotobold';
+}
+
+.eventContent {
+  width: 80%;
+  margin: 0;
+  float: left;
+  padding: 0 15px 0 15px;
+}
+
+/* COLOR AND FONT STYLES FOR ELEMENTS, TEXTS, BACKGROUNDS AND MORE */
+
+.mini-blocks {
+  min-width: 175px;
+  min-height: 175px;
+  text-align: center;
+  float: left;
+}
+
+.mid-blocks {
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  float: left;
+  padding: 15px;
+}
+
+.mini-blocks:hover {
+  background-color: rgba(255,255,255,0.5);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* For text colors and background colors */
+
+.cvg-lb {
+  color: #0cc0db;
+}
+
+.cvg-lb-bg {
+  background-color: #0cc0db;
+  color: #fff;
+}
+
+.cvg-greenish {
+  color: #259d9c;
+}
+.cvg-greenish-bg {
+  background-color: #259d9c;
+  color: #fff;
+}
+
+.cvg-teal {
+  color: #00a2b1;
+}
+.cvg-teal-bg {
+  background-color: #00a2b1;
+  color: #fff;
+}
+
+.cvg-dark-blue {
+  color: #333e48;
+}
+
+.cvg-dark-blue-bg {
+  background-color: #333e48;
+  color: #fff;
+}
+
+.cvg-redish {
+  color: #da4d49;
+}
+
+.cvg-redish-bg {
+  background-color: #da4d49;
+  color: #fff;
+}
+
+.cvg-darkish-bg {
+  background-color: #161a1d;
+  color: #fff;
+}
+.cvg-grayish-bg {
+  background-color: #404548;
+  color: #fff;
+}
+
+.cvg-cyan {
+  color: #009bdb;
+}
+
+.cvg-cyan-bg {
+  background-color: #009bdb;
+  color: #fff;
+}
+
+.cvg-lb-bg a, .cvg-greenish-bg a, .cvg-redish-bg a, .cvg-dark-blue-bg a, .cvg-teal-bg a, .cvg-grayish-bg a, .cvg-cyan-bg a{
+  color: #fff;
+}
+
+.light {
+  font-family: 'open_sanslight';
+  font-weight: lighter;
+}
+
+.belowheadlines {
+  border:0;
+  width: 35%;
+  height: 1px;
+  background: #ff7b39;
+	margin: 35px auto 20px auto;
+}
+
+.belowheadlines-white {
+  border:0;
+  width: 35%;
+  height: 1px;
+  background: #fff;
+	margin: 35px auto 20px auto;
+}
+
+.belowheadlines-gray {
+  border:0;
+  width: 35%;
+  height: 1px;
+  background: #d6d6d6;
+	margin: 35px auto 20px auto;
+}
+
+.nopadding{
+  padding:0 !important;
+}
+
+.lead-hover-msg{
+  margin-top:70px;
+}
+
+.lead-hover-msg em{
+  font-size: 1.3vw;
+}
+
+/* Leaders Modal Content */
+
+.modal-content {
+  color: #fff !important;
+}
+
+/************************************
+ * Close button
+************************************/
+#closebt-container {
+	position: relative;
+	width:100%;
+	text-align:center;
+	margin-top:40px;
+  margin-bottom:40px;
+}
+
+.closebt {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor:pointer;
+}
+
+.closebt:hover {
+	transform:rotate(90deg);
+}
+
+/* QUICK LINKS SIDEBAR */
+
+.sidenav {
+  position: fixed;
+  left: 0;
+  top: 35%;
+  z-index: 5;
+  width: auto;
+  padding: 25px 0 25px 0;
+  background: #2c3136;
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+  max-height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+}
+.sidenav a {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 1em 1.5em 1em 25px;
+  text-align: left;
+  border-bottom: none;
+}
+.sidenav a:hover {
+  box-shadow: inset 3px 0 0 #1784c7;
+  background-color: #33383e;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+  left: -240px;
+}
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.quickLinks {
+  position: fixed;
+  top: 27%;
+  left: 0;
+  z-index: 5;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding:5px 8px 10px 8px;
+  background: #2c3136;
+  color: #fff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+}
+.quickLinks:hover {
+  background: #1784c7;
+}
+
+.quickLinks img {
+  width: 25px;
+  height: 25px;
+}

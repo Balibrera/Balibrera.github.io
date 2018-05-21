@@ -1,0 +1,39 @@
+
+.percentage-kpi-data-text {
+    color: #4c4c4c;
+    text-align: center;
+    vertical-align: top;
+}
+
+.percentage-kpi-sub-data-text {
+    font-family: KPIWidgetNumber;
+    color: #4c4c4c;
+    font-size: 0.5em;
+    margin-top: -0.3em;
+    text-align: center;
+
+}
+
+.percentage-kpi-container {
+    color: #4c4c4c;
+    font-family: KPIWidget;
+    background-color: #f7f7f5;
+    box-shadow: 0 1px 5px rgba(0,0,0,.3), inset 0 10px 30px rgba(255,255,255,.3);
+}
+
+.percentage-kpi-container:hover {
+   opacity: 0.8;
+}
+
+.percentage-kpi-data {
+    display: table;
+    text-align: center;
+    width: 100%;
+    font-size: 46px;
+}
+
+.percentage-kpi-footer {
+    display: table;
+    text-align: center;
+    width: 100%;
+}

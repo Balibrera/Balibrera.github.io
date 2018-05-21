@@ -1,0 +1,609 @@
+/* This style sheet is intented for site structure only,
+please be careful when making changes as it will affect
+the way objects are displayed on screen, its position,
+size and general structure.
+
+***For background images and text element color details
+see themes styles***/
+
+/* Convergys San Salvador 2017 - Sharepoint Development Team | DG & VL | */
+
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* RESET ENDS */
+
+/* Site Structural design starts */
+
+/* General body and page standards and site styles */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	background: transparent;
+	margin: 0;
+	font-family: 'open_sanslight', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+	font-style: normal;
+	color: #21252b;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Header Structure */
+
+.cvgtop {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+	position: fixed;
+	top: 0;
+	z-index: 100;
+
+}
+.cvgheader {
+	max-width: 1100px;
+	margin: 0 auto;
+
+}
+
+header {
+
+		// set animation
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+}
+
+.cvglogo {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.cvglogo img {
+	width: 150px;
+  margin: 15px auto;
+}
+
+/* Footer Elements */
+
+.footlinks {
+	max-width: 1100px;
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px 0 15px 0;
+	color: #fff;
+}
+
+/* Content Structure */
+
+.contentwrapper {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.contentcontainer {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background: #fff;
+}
+
+.rowcontainer {
+	position: relative;
+	max-width: 1100px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	padding: 25px 20px 25px 20px;
+	clear: both;
+}
+
+.container-single {
+	background: #ea4a44;
+}
+
+.row-single {
+	max-width: 900px;
+	margin: 0 auto 0 auto;
+	padding: 25px;
+}
+
+.single-item {
+	background-color: #fff;
+	padding: 25px 35px 20px 35px;
+	border-radius: 15px 15px 15px 15px;
+		-moz-border-radius: 15px 15px 15px 15px;
+		-webkit-border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+
+}
+
+.blockscontainer {
+	position: relative;
+	max-width: 1100px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	clear: both;
+}
+
+.inBlocks {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	clear: both;
+}
+
+/* Fullwidth sections */
+
+.fullwidth {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 30px;
+	margin: 0;
+}
+
+.rowfull {
+	position: relative;
+	max-width: 1100px;
+	width: 100%;
+	height: auto;
+	margin: 10px auto 25px auto;
+	padding: 0 10px 0 10px;
+	clear: both;
+}
+
+.topbg {
+	background-repeat: no-repeat;
+}
+
+.pageheadtitle {
+	position: relative;
+	top: 25%;
+	left: 15%;
+	width: 100%;
+	margin: 0 auto 0 auto;
+	z-index: 1;
+}
+
+.pageheadtitle-left {
+	position: relative;
+	width: 75%;
+	margin: 8% 0 0 8%;
+	text-align: left;
+	z-index: 1;
+}
+
+.pageheadtitle-left2 {
+    position: absolute;
+    top: 16%;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    z-index: 1;
+    padding-left: 20%;
+}
+
+.leaders {
+	position: relative;
+	width: 100%;
+	min-height: 500px;
+	overflow: hidden;
+	padding: 0 0 35px 0;
+}
+
+/* Other Structural Elements */
+
+.devCover {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 830px;
+	overflow: hidden;
+	background: url(../../SiteAssets/img/backgrounds/dev-team-bg.jpg) center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+}
+
+.devTitle {
+	position: absolute;
+	top: 40%;
+	left: 25%;
+	width: 50%;
+	height: auto;
+	overflow: hidden;
+}
+
+.backHome {
+	position: absolute;
+	top: 5%;
+	left: 2%;
+	text-align: center;
+	/*-webkit-text-shadow: 1px 1px #000;
+	-moz-text-shadow: 1px 1px #000;
+	text-shadow: 1px 1px #000;*/
+	color: #fff;
+	z-index: 3;
+}
+
+.backHome a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.boxes {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto 15px auto;
+	padding: 10px !important;
+	border: 1px solid #d8d8d8;
+	-webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	background: #fff;
+}
+
+.boxes2 {
+	position: relative;
+	width: 98%;
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	margin: 0 auto 15px auto;
+	border: 1px solid #d8d8d8;
+	-webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	background: #fff;
+}
+
+.boxes3 {
+	position: relative;
+	width: 100%;
+	min-height: 250px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto 15px auto;
+	padding: 0;
+	border: 1px solid #d8d8d8;
+	-webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	background: #fff;
+}
+
+.boxes4 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	border: 1px solid #d8d8d8;
+	-webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+	background: #fff;
+}
+
+.boxes-img img {
+	margin: 15px 0 15px 5px;
+}
+
+.boxes-text {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	float: left;
+}
+
+.boxes-content-full {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	float: none;
+	clear: both;
+}
+
+.boxes-titles {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 10px 0 0 10px;
+}
+
+.leadBlockContainer {
+	position: fixed;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	bottom: 0;
+	background: #fff;
+	z-index: 999;
+	-webkit-box-shadow: 0px -10px 25px 0px rgba(0,0,0,0.25);
+		 -moz-box-shadow: 0px -10px 25px 0px rgba(0,0,0,0.25);
+			    box-shadow: 0px -10px 25px 0px rgba(0,0,0,0.25);
+}
+
+.leadBlock {
+	text-align: center;
+	background: #fff;
+}
+
+/*.staff-name {
+	display: block;
+	font-size: 20px;
+	line-height: 1.5em;
+	text-transform: uppercase;
+}
+
+.team-title-box {
+	position: relative;
+	margin: 20px auto 15px auto;
+	padding: 10px;
+	text-align: center;
+} */
+
+/* Images Blocks */
+
+.blockleft1 {
+	text-align: center;
+	padding: 5px !important;
+}
+
+.blockright1 {
+	text-align: center;
+	padding: 5px !important;
+
+}
+
+.blockleft2 {
+	text-align: center;
+	padding: 5px !important;
+
+}
+
+.blockright2 {
+	text-align: center;
+	padding: 5px !important;
+
+}
+
+/* Slider and texture */
+
+.slider {
+	position: relative;
+	margin: 0 auto;
+
+}
+
+.slider img {
+	width: 100%;
+	z-index: -1;
+}
+
+.slidercontent {
+	position: absolute;
+	top: 42%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #fff;
+	font-size: 1.25em;
+	margin: auto;
+	z-index: 3;
+}
+
+.slidertexture {
+		background: url(../../SiteAssets/img/grid.png) ;
+		min-height: 450px;
+    width: 100%;
+		height: 100%;
+    position: absolute;
+    z-index: 3;
+		opacity: 1;
+}
+
+.bgTexture {
+		background: url(../../SiteAssets/img/grid.png) ;
+    width: 100%;
+		height: 400px;
+    position: absolute;
+    z-index: 3;
+		opacity: 1;
+}
+
+/* IMAGES */
+
+.contentimg {
+	margin: 15px;
+}
+
+.responsiveimg {
+	max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.responsiveimg2 {
+	width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.responsiveimg3 {
+	max-width: 100%;
+	min-width: 90%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+.img-sm {
+	width: 225px;
+}
+
+.gallery  {
+    width: 100%;
+		text-align: center;
+		border-bottom: 1px solid #cdd1d4;
+		padding-bottom: 25px;
+}
+
+.leaders-img {
+	width: 125px;
+	height: auto;
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+	clear: both;
+	margin: 0 auto 25px auto;
+}
+
+.staff-img {
+	width: 250px;
+	height: auto;
+}
+
+.acc-lead-logo {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.round-img {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+.elem-hidden{
+	visibility: hidden;
+}
+
+/*---------------------------------*/
+/*--- ALIGNING OBJECTS AND TEXT ---*/
+/*---------------------------------*/
+
+.centered {
+	margin: 0 auto;
+	float: none !important;
+	clear: both;
+}
+
+.floatleft {
+	float: left;
+	clear: right;
+	padding: 15px 20px 15px 0;
+}
+
+.floatright {
+	float: right;
+	clear: left;
+	padding: 15px 0px 15px 20px;
+}
+
+.middle {
+	position: relative;
+	top: 32%;
+}
+
+/* eBooks Styling */
+
+.ebook-container {
+	background: #282728;
+}
+
+.ebook-item {
+	background-color: #141516;
+	color: #fff;
+	padding: 25px 40px 20px 40px;
+	box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 15px 53px 0px rgba(0,0,0,0.5);
+
+}
+
+.ebook-summary {
+	width: 100%;
+	padding: 5px;
+	font-size: 12px;
+}
+
+object.eBook-pdf {
+	width: 100%;
+	height: 100%;
+	min-height: 600px;
+}

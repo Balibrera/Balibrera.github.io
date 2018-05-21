@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 	<title>ATT Direct TV ACE</title>
+
+	<!-- Global CSS -->
+	<link rel="stylesheet" type="text/css" href="css/cvgspresponsive.css"> <!-- BOXES -->
+	<link rel="stylesheet" href="css/structure.css"> <!-- -->
+	<link rel="stylesheet" href="css/themed.css"> <!-- THEMES & COLORS -->
+	<link rel="stylesheet" href="css/fonts.css"> <!-- FONTS -->
+	<link rel="stylesheet" href="css/text-elements.css"> <!-- TEXT -->
+	<link rel="stylesheet" href="css/helper.css"> <!-- -->
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css"> <!-- -->
+
+	<!-- Global JS -->
+	<script type="text/javascript" src="external/jquery-ui-1.12.1/external/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/image-swap.js"></script> <!-- HEADER IMAGE -->
+
+
+	<!-- Comes with page itself -->
+	<link rel="stylesheet" type="text/css" href="css/tabs.css"> <!-- -->
+
+
+	<!-- Might be removed  from here-->
+	<script type="text/javascript" src="js/supportsc.js"></script>
+	<script type="text/javascript" src="ban/banimgstr.js"></script>
+
+
+	<!-- KPI OBJECTS -->
+
+	<script src="external/jquery-kpiwidgets-master/lib/jquery-ui.min.js" type="text/javascript"></script>
+
+	<link type="text/css" href="external/jquery-kpiwidgets-master/css/generalKPI.css" rel="stylesheet"/>
+	<link type="text/css" href="external/jquery-kpiwidgets-master/css/numTrendKPI.css" rel="stylesheet"/>
+	<link type="text/css" href="external/jquery-kpiwidgets-master/css/topThreeKPI.css" rel="stylesheet"/>
+	<link type="text/css" href="external/jquery-kpiwidgets-master/css/percentageKPI.css" rel="stylesheet"/>
+
+	<script type="text/javascript" src="external/jquery-kpiwidgets-master/js/numTrendKPI.js"></script>
+	<script type="text/javascript" src="external/jquery-kpiwidgets-master/js/topThreeKPI.js"></script>
+	<script type="text/javascript" src="external/jquery-kpiwidgets-master/js/percentageKPI.js"></script>
+
+	<script>
+			$(document).ready(function () {
+
+				/*
+					var kpiWidget = $("#numAndTrendKPI").NumTrendKPI({
+							title: "TOTAL REVENUE",
+							footer: "GOAL SET: $3500/WEEK",
+
+							data: {
+									value: 49000,
+									trend: "up",
+									symbol: "$"
+							},
+
+							clickHandler: function () {
+									alert("this is a click");
+							}
+					});
+*/
+
+					var manned = $("#manned").TopThreeKPI({
+							title: "MANNED",
+							footer: "GOAL SET: 18",
+
+							data: [{
+									name: "AHT",
+									value: 180,
+									symbol: "",
+									trend: "up"
+									//delta: 2 - change delta - optional
+									}, {
+									name: "ACW",
+									value: 200,
+									symbol: "",
+									trend: "down"
+							},{
+									name: "HOLD",
+									value: 180,
+									symbol: "",
+									trend: "up"
+									//delta: 2 - change delta - optional
+							}],
+
+							clickHandler: function () {
+								//	alert("this is a click");
+							}
+					});
+
+					var productivity = $("#productivity").TopThreeKPI({
+							title: "PRODUCTIVITY",
+							footer: "GOAL SET: 18",
+
+							data: [{
+									name: "AP",
+									value: 180,
+									symbol: "",
+									trend: "up"
+									//delta: 2 - change delta - optional
+									}, {
+									name: "OCC",
+									value: 200,
+									symbol: "",
+									trend: "down"
+							}],
+
+							clickHandler: function () {
+								//	alert("this is a click");
+							}
+					});
+
+				var sales = $("#sales").TopThreeKPI({
+						title: "SALES",
+						footer: "GOAL SET: 18",
+
+						data: [{
+								name: "Equipments",
+								value: 180,
+								symbol: "",
+								trend: "up"
+								//delta: 2 - change delta - optional
+								}, {
+								name: "Bundles",
+								value: 200,
+								symbol: "",
+								trend: "down"
+						},{
+								name: "Upgrades",
+								value: 180,
+								symbol: "",
+								trend: "up"
+								//delta: 2 - change delta - optional
+						},{
+								name: "Downgrades",
+								value: 200,
+								symbol: "",
+								trend: "down"
+						}],
+
+						clickHandler: function () {
+							//	alert("this is a click");
+						}
+				});
+
+				var opus = $("#opus").TopThreeKPI({
+						title: "OPUS",
+						footer: "GOAL SET: 18",
+
+						data: [{
+								name: "New Lines",
+								value: 180,
+								symbol: "",
+								trend: "up"
+								//delta: 2 - change delta - optional
+								}, {
+								name: "Other",
+								value: 200,
+								symbol: "",
+								trend: "down"
+						}],
+
+						clickHandler: function () {
+							//	alert("this is a click");
+						}
+				});
+
+/*
+					var percentageKPI = $("#percentage").PercentageKPI({
+							title: "TOP GROSSING AGE GROUP",
+							footer: "3,334 users",
+							data: {
+									value: "18-25",
+									partial: 1234,
+									total : 3334
+							},
+
+							clickHandler: function(){
+									alert("this is a click");
+							}
+					});
+*/
+			});
+	</script>
+
+</head>
+<body>
+	<div class="cvgcontainer"><!-- MAIN CONTAINER BEGINS -->
+		<header class="cvgtop"> <!-- HEADER STARTS -->
+			<div class="cvgheader">
+				<div class="col-2 cvglogo">
+					<a href="home.html"><img src="img/directv_logo2012_horiz_2c.svg"></a>
+				</div>
+				<div class="nav col-8"> <!-- MAIN MENU -->
+					<ul>
+
+						<li class="dropdown">
+							<a href="sales.htm" class="dropbtn">SALES<span class="caret"></span></a>
+							<ul>
+								<li><a href="sales-tracker.htm">Sales Tracker</a></li>
+								<li><a href="my-sales-tracker.htm">OPUS</a></li>
+								<li><a href="opus-sales-tracker.htm">Wireless</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="metrics.htm" class="dropbtn">MOD<span class="caret"></span></a>
+							<ul>
+								<li><a href="metrics.htm">OTF</a></li>
+								<li><a href="opus-sales-tracker.htm">Real Time</a></li>
+								<li><a href="attendance.htm">Attendance</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="sales.htm" class="dropbtn">BID<span class="caret"></span></a>
+							<ul>
+								<li><a href="opus-sales-tracker.htm">Survey</a></li>
+								<li><a href="my-sales-tracker.htm">Ranking</a></li>
+								<li><a href="sales-tracker.htm">Selection</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropbtn">LINKS<span class="caret"></span></a>
+							<ul>
+								<li><a href="endeavor.htm">eStart</a></li>
+								<li><a href="cvgsansalvador/">Convergys</a></li>
+								<li><a href="">...</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropbtn">MEDIA<span class="caret"></span></a>
+							<ul>
+								<li><a href="fun-pics.htm">Picture Galleries</a></li>
+								<li><a href="fun-vids.htm">Video Galleries</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="news.htm" class="dropbtn">WHAT'S NEW <span class="caret"></span></a>
+							<ul>
+								<li><a href="fun.htm">NFL Pick'em</a></li>
+								<li><a href="jobs.htm">ACE Activities</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div> <!-- MAIN MENU ENDS -->
+				<div class="col-2">
+					<div class="user-icon"> <img src="img/icons/user-icon.svg" alt="" ></div>
+					<div class="user-name">Welcome</div>
+
+				</div>
+			</div>
+		</header> <!-- HEADER ENDS -->
+
+
+		<div class="contentwrapper"> <!-- MAIN CONTENT BEGINS -->
+		<div class="pagesheader"><!-- PAGES HEADER BEGINS -->
+			<div class="pageheadtitle">
+				<div class="col-12">
+					<h2 class="pagestitle">ACE</h2>
+
+				</div>
+			</div>
+		</div><!-- PAGES HEADER ENDS -->
+
+
+		<div class="fullwidth kpi"> <!-- FOR FULL WIDTH SECTIONS -->
+			<div class="update">
+				Last updated on: <span id="update"></span>
+			</div>
+			<div class="kpi-container-div">
+				<div id="manned" class="kpi-item"></div>
+				<div id="productivity" class="kpi-item"></div>
+				<div id="sales" class="kpi-item"></div>
+				<div id="opus" class="kpi-item"></div>
+			</div>
+
+		</div><!-- FULL WIDTH ENDS -->
+
+
+
+
+		<div class="contentcontainer"> <!-- PAGES CONTENT STARTS -->
+			<div class="rowcontainer">
+
+			</div>
+
+			<div class="fullwidth">
+
+			</div>
+
+		</div><!-- PAGES CONTENT ENDS -->
+
+
+		</div><!-- MAIN CONTENT ENDS -->
+
+</div><!-- MAIN CONTAINER ENDS -->
+
+</body>
+
+
+<script>
+// sticky Header
+
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 1){
+			$('header').addClass("sticky");
+	}
+	else{
+			$('header').removeClass("sticky");
+	}
+});
+
+$( document ).ready(function(){
+	// RAMDOMLY SHOWS UP MAIN BANNER
+	$('.pagesheader').css("background-image","url(img/backgrounds/" + showBanner(vBanners) + ")");
+});
+
+</script>
+
+<script src="js/cbpFWTabs.js"></script>
+<script>
+(function() {
+
+	[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+		new CBPFWTabs( el );
+	});
+
+})();
+</script>
+	<!-- FOOTER ELEMENTS FINISH -->
+</html>
